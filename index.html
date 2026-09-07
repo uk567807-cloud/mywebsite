@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zubair Ahmed<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zubair Ahmed</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -10,29 +16,86 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #111827, #4f46e5, #9333ea);
     color: white;
+    overflow: hidden;
+
+    background: linear-gradient(-45deg, #111827, #4f46e5, #9333ea, #0ea5e9);
+    background-size: 400% 400%;
+    animation: bg 10s ease infinite;
+}
+
+@keyframes bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .card {
     width: 90%;
-    max-width: 450px;
-    padding: 40px 25px;
+    max-width: 430px;
+    padding: 35px 25px;
     text-align: center;
-    border-radius: 25px;
-    background: #1f2937;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    animation: fadeIn 1.5s ease;
+    border-radius: 30px;
+    background: rgba(17, 24, 39, 0.75);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    animation: card 1.2s ease;
+}
+
+@keyframes card {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    animation: photo 3s ease-in-out infinite;
+}
+
+@keyframes photo {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }
 
 h1 {
     font-size: 38px;
-    animation: slideDown 1s ease;
+    margin: 20px 0 10px;
 }
 
 p {
-    color: #d1d5db;
     font-size: 18px;
+    color: #e5e7eb;
+}
+
+.social {
+    margin-top: 25px;
+}
+
+.social a {
+    display: inline-block;
+    margin: 5px;
+    padding: 12px 18px;
+    border-radius: 25px;
+    background: #374151;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    transform: translateY(-5px);
+    background: #4f46e5;
 }
 
 button {
@@ -42,170 +105,39 @@ button {
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
-button:hover {
-    transform: scale(1.08);
+button:active {
+    transform: scale(0.95);
 }
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-</style>d</title>
-
-    <style>
-        * {
-           .card {
-    animation: fadeIn 1.5s ease;
-}
-
-h1 {
-    animation: slideDown 1s ease;
-}
-
-button, .social a {
-    transition: transform 0.3s ease;
-}
-
-button:hover, .social a:hover {
-    transform: scale(1.08);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-        }
-
-        body d:background: linear-gradient(135deg, #111827, #4f46e5, #9333ea);
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: #111827;
-            color: white;
-        }
-
-        .card {
-            width: 90%;
-            max-width: 450px;
-            padding: 40px 25px;
-            text-align: center;
-            border-radius: 25px;
-            background: #1f2937;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-        }
-
-        h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #d1d5db;
-            font-size: 18px;
-        }
-
-<div class="social">
-    <a href="https://facebook.com" target= "_blank">Facebook</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-</div>.social {
-    margin-top: 25px;
-}
-
-.social a {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    background: #374151;
-    color: white;
-    text-decoration: none;
-}        button {
-            margin-top: 20px;
-            padding: 14px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-        button:active {
-            transform: scale(0.95);
-         }.social {
-    margin-top: 25px;
-}
-
-.social a {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    background: #374151;
-    color: white;
-    text-decoration: none;
-}
-    </style>
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <h1>Zubair Ahmed</h1>
-        <p>Welcome to my website 🚀</p>
-<div class="social">
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-</div>
-        <button onclick="alert('Hello Zubair Ahmed!')">
-            Click Me
-        </button>
+<div class="card">
+
+    <img src="profile.jpg" class="profile">
+
+    <h1>Zubair Ahmed</h1>
+
+    <p>Welcome to my website 🚀</p>
+
+    <div class="social">
+        <a href="https://www.facebook.com/share/186fATMUhx/" target="_blank">
+            Facebook
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            Instagram
+        </a>
     </div>
 
+    <button onclick="alert('Hello Zubair Ahmed! 👋')">
+        Click Me
+    </button>
+
+</div>
+
 </body>
-</html>                                                    
-                                                
-                           
-                                          
-                        
-                          
+</html> 
