@@ -3,112 +3,141 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zubair Official</title>
-                   
+
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#09001f,#21005c,#001b5c);
+    overflow:auto;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    color: white;
-    overflow: hidden;
-
-    background: linear-gradient(-45deg, #111827, #4f46e5, #9333ea, #0ea5e9);
-    background-size: 400% 400%;
-    animation: bg 10s ease infinite;
+body:before,body:after{
+    content:"";
+    position:fixed;
+    border-radius:50%;
+    filter:blur(2px);
+    opacity:.35;
 }
 
-@keyframes bg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+body:before{
+    width:220px;
+    height:220px;
+    background:#7c3aed;
+    top:-70px;
+    left:-60px;
 }
 
-.card {
-    width: 90%;
-    max-width: 430px;
-    padding: 35px 25px;
-    text-align: center;
-    border-radius: 30px;
-    background: rgba(17, 24, 39, 0.75);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    animation: card 1.2s ease;
+body:after{
+    width:250px;
+    height:250px;
+    background:#2563eb;
+    bottom:-90px;
+    right:-70px;
 }
 
-@keyframes card {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.card{
+    position:relative;
+    width:92%;
+    max-width:430px;
+    margin:25px 0;
+    padding:32px 24px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(15,10,45,.78);
+    border:1px solid rgba(255,255,255,.15);
+    box-shadow:0 0 45px rgba(98,0,255,.35);
+    backdrop-filter:blur(14px);
 }
 
-.profile {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
-    box-shadow: 0 0 30px rgba(255,255,255,0.6);
-    animation: photo 3s ease-in-out infinite;
+.menu{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:28px;
 }
 
-@keyframes photo {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.06); }
+.profile{
+    width:145px;
+    height:145px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    box-shadow:0 0 30px #8b5cf6;
 }
 
-h1 {
-    font-size: 38px;
-    margin: 20px 0 10px;
+h1{
+    margin:20px 0 8px;
+    font-size:38px;
+    background:linear-gradient(90deg,#fff,#a78bfa,#60a5fa);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
-p {
-    font-size: 18px;
-    color: #e5e7eb;
+.welcome{
+    font-size:19px;
+    color:#ddd6fe;
 }
 
-.social {
-    margin-top: 25px;
+.social{
+    margin:25px 0 10px;
 }
 
-.social a {
-    display: inline-block;
-    margin: 5px;
-    padding: 12px 18px;
-    border-radius: 25px;
-    background: #374151;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
+.social a{
+    display:inline-block;
+    margin:5px;
+    padding:11px 17px;
+    border-radius:25px;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.15);
+    transition:.3s;
 }
 
-.social a:hover {
-    transform: translateY(-5px);
-    background: #4f46e5;
+.social a:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 18px #6366f1;
 }
 
-button {
-    margin-top: 20px;
-    padding: 14px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
+button{
+    margin:18px 0;
+    padding:14px 32px;
+    border:0;
+    border-radius:30px;
+    font-size:18px;
+    font-weight:bold;
+    color:white;
+    background:linear-gradient(90deg,#7c3aed,#2563eb);
+    box-shadow:0 0 25px rgba(99,102,241,.5);
 }
 
-button:active {
-    transform: scale(0.95);
+.skills{
+    margin-top:15px;
+}
+
+.skills h2{
+    font-size:25px;
+}
+
+.skill{
+    display:inline-block;
+    margin:5px;
+    padding:10px 14px;
+    border-radius:20px;
+    background:rgba(255,255,255,.09);
+}
+
+.thanks{
+    margin-top:22px;
+    color:#c4b5fd;
 }
 </style>
 </head>
@@ -117,32 +146,48 @@ button:active {
 
 <div class="card">
 
+    <div class="menu">☰</div>
+
     <img src="profile.jpg" class="profile">
 
-    ><h1>Zubair Official</h1>
-       
-    <p>Welcome to my website 🚀</p>
+    <h1>Zubair Official</h1>
+
+    <div class="welcome">
+        Welcome to my website 🚀
+    </div>
 
     <div class="social">
-        <a href="https://www.facebook.com/share/186fATMUhx/" target="_blank">
+
+        <a href="https://www.facebook.com/share/19LbDG8sTy/" target="_blank">
             Facebook
-        </a><a href="https://wa.me/923283831689" target="_blank">
-    WhatsApp
-</a>
-         <a href="MovieBox.apk" download>
-    Download App
-</a>             
+        </a>
+
         <a href="https://www.instagram.com/" target="_blank">
             Instagram
         </a>
-    </div><h2>My Skill</h2>
-<p>📱 Mobile Development</p><p>💻 Web Development</p>
-          
+
+        <a href="https://wa.me/923283831689" target="_blank">
+            WhatsApp
+        </a>
+
+    </div>
+
     <button onclick="alert('Hello Zubair Ahmed! 👋')">
         Click Me
     </button>
 
+    <div class="skills">
+        <h2>My Skills</h2>
+
+        <span class="skill">📱 Mobile Development</span>
+        <span class="skill">💻 Web Development</span>
+    </div>
+
+    <div class="thanks">
+        Thanks for visiting ❤️
+    </div>
+
 </div>
 
 </body>
-</html> 
+</html>
