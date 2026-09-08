@@ -139,17 +139,74 @@ button{
     margin-top:22px;
     color:#c4b5fd;
 }
-</style>
+</style>.menu{
+    position:absolute;
+    top:18px;
+    right:20px;
+    font-size:30px;
+    color:white;
+    cursor:pointer;
+}
+
+.menu-options{
+    display:none;
+    position:absolute;
+    right:0;
+    top:45px;
+    width:230px;
+    padding:10px;
+    background:#17122f;
+    border-radius:18px;
+    box-shadow:0 0 25px #6366f1;
+    z-index:10;
+}
+
+.menu:hover .menu-options{
+    display:block;
+}
+
+.menu-options a{
+    display:block;
+    padding:10px;
+    margin:4px 0;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.08);
+}
+
+.menu-options a:hover{
+    background:#6366f1;
+}
 </head>
 
 <body>
 
 <div class="card">
 
-    <div class="menu">☰</div>
-
+    Ece
+<div class="menu">
+☰
+<div class="menu-options">
+<a href="#trending">🔥 Trending</a>
+<a href="#updates">🆕 Latest Updates</a>
+<a href="#goals">🎯 My Goals</a>
+<a href="#achievements">🏆 Achievements</a>
+<a href="#services">💼 Services</a>
+<a href="#pricing">💰 Pricing</a>
+<a href="#announcements">📢 Announcements</a>
+<a href="#screenshots">📱 App Screenshots</a>
+<a href="#downloads">⬇️ Download Center</a>
+<a href="#search">🔍 Search</a>
+<a href="#theme">🌙 Dark / Light Theme</a>
+<a href="#language">🌐 Language Switcher</a>
+<a href="#visitor">📊 Visitor Counter</a>
+<a href="#like">❤️ Like Button</a>
+<a href="#share">📤 Share Website</a>
+</div>
+</div>                         
     <img src="profile.jpg" class="profile">
-
+                                
     <h1>Zubair Official</h1>
 
     <div class="welcome">
