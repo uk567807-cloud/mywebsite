@@ -188,6 +188,22 @@ button{
     </div>
 
 </div>
+<div id="modeMenu">
+    <button onclick="darkMode()">⚫ Black / Dark</button>
+    <button onclick="lightMode()">⚪ White / Light</button>
+</div>
 
+<script>
+function darkMode(){
+    document.body.style.background = "#080808";
+    document.querySelector(".card").style.background = "#151515";
+}
+
+function lightMode(){
+    document.body.style.background = "#f5f5f5";
+    document.querySelector(".card").style.background = "#ffffff";
+    document.querySelector(".card").style.color = "#111111";
+}
+</script>
 </body>
 </html>
